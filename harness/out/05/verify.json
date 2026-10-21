@@ -1,0 +1,40 @@
+{
+  "checked_at": "2026-10-21T07:31:21.004Z",
+  "results": [
+    {
+      "name": "R1 카드 4개·라우트 200",
+      "ok": true,
+      "detail": "통과"
+    },
+    {
+      "name": "R2 추천 Tag 1개",
+      "ok": true,
+      "detail": "통과"
+    },
+    {
+      "name": "R3 가격 2개까지 ★",
+      "ok": true,
+      "detail": "통과"
+    },
+    {
+      "name": "R4 할인 종료 후 금액은 할인 요금제만 ★",
+      "ok": true,
+      "detail": "통과"
+    },
+    {
+      "name": "R5 무제한 속도 표기 ★",
+      "ok": true,
+      "detail": "통과"
+    },
+    {
+      "name": "R6 미입력 시 신청 불가 (초기 상태만)",
+      "ok": true,
+      "detail": "통과"
+    },
+    {
+      "name": "R7 완료 화면 = 신청 요금제 (정적 근사)",
+      "ok": true,
+      "detail": "통과"
+    }
+  ]
+}
