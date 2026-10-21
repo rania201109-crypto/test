@@ -1,13 +1,19 @@
 {
-  "current": "2",
+  "current": "approve",
   "retries": {
-    "1": 0
+    "1": 0,
+    "2": 0
   },
   "history": [
     {
       "stage": "1",
       "ok": true,
       "at": "2026-10-21T05:30:33.747Z"
+    },
+    {
+      "stage": "2",
+      "ok": true,
+      "at": "2026-10-21T05:32:14.340Z"
     }
   ],
   "stopped": false

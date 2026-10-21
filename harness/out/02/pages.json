@@ -1,0 +1,57 @@
+{
+  "spec_file": "docs/2026-10-21-screen-spec.md",
+  "pages": [
+    {
+      "route": "/plans",
+      "spec_route": "/plans",
+      "name": "요금제 목록",
+      "file": "app/plans/page.tsx",
+      "components": ["Header", "Logo", "FilterChip", "Card/Plan", "Tag", "Chip", "Button"],
+      "missing_components": [],
+      "moves": [
+        { "action": "카드의 '자세히' 누름", "to": "/plans/[id]" }
+      ],
+      "open_questions": ["q3", "q4", "q5", "q6", "q14", "q15", "q16"]
+    },
+    {
+      "route": "/plans/[id]",
+      "spec_route": "/plans/:planId",
+      "name": "요금제 상세",
+      "file": "app/plans/[id]/page.tsx",
+      "components": ["Header", "icon/arrowLeft", "Card/Price", "List/Row", "Tag", "OptionItem", "BottomCTA", "Button"],
+      "missing_components": [],
+      "moves": [
+        { "action": "헤더 뒤로 아이콘(icon/arrowLeft) 누름", "to": "/plans" },
+        { "action": "'구독 신청하기' 누름 (선택한 요금제 id 전달)", "to": "/apply" }
+      ],
+      "open_questions": ["q5", "q7", "q8", "q9", "q14"]
+    },
+    {
+      "route": "/apply",
+      "spec_route": "/subscription/apply",
+      "name": "구독 신청",
+      "file": "app/apply/page.tsx",
+      "components": ["Header", "icon/arrowLeft", "List/Row", "Input", "Checkbox", "BottomCTA", "Button"],
+      "missing_components": [],
+      "moves": [
+        { "action": "헤더 뒤로 아이콘(icon/arrowLeft) 누름", "to": "/plans/[id]" },
+        { "action": "'취소' 누름", "to": "/plans/[id]" },
+        { "action": "'신청하기' 누름 (이름·휴대폰 번호 입력 + 동의 체크 시, Subscription 1건 저장)", "to": "/complete" }
+      ],
+      "open_questions": ["q10"]
+    },
+    {
+      "route": "/complete",
+      "spec_route": "/subscription/complete",
+      "name": "신청 완료",
+      "file": "app/complete/page.tsx",
+      "components": ["Header", "icon/arrowLeft", "icon/doneMark", "List/Row", "BottomCTA", "Button"],
+      "missing_components": [],
+      "moves": [
+        { "action": "헤더 뒤로 아이콘(icon/arrowLeft) 누름", "to": null },
+        { "action": "'요금제 더 보기' 누름", "to": null }
+      ],
+      "open_questions": ["q1", "q2", "q11", "q12", "q13"]
+    }
+  ]
+}
