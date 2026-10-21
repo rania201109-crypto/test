@@ -1,0 +1,78 @@
+{
+  "source": "docs/PRD.md",
+  "screens": [
+    { "order": 1, "name": "요금제 목록", "route": "/plans", "stories": ["US1", "US2", "US3", "US4"] },
+    { "order": 2, "name": "요금제 상세", "route": "/plans/[id]", "stories": ["US3", "US4", "US5"] },
+    { "order": 3, "name": "구독 신청", "route": "/apply", "stories": ["US4", "US5"] },
+    { "order": 4, "name": "신청 완료", "route": "/complete", "stories": ["US5"] }
+  ],
+  "plans": [
+    {
+      "id": "p01",
+      "name": "슬림 10GB",
+      "monthly_price": 39000,
+      "data": "10GB",
+      "throttle_after": "1Mbps",
+      "price_after_discount": null,
+      "discount_months": null,
+      "description": "출퇴근 영상 시청이 적은 고객용 기본 요금제"
+    },
+    {
+      "id": "p02",
+      "name": "데일리 50GB",
+      "monthly_price": 52000,
+      "data": "50GB",
+      "throttle_after": "1Mbps",
+      "price_after_discount": null,
+      "discount_months": null,
+      "description": "출퇴근길 영상을 월말까지 보고 싶은 고객용"
+    },
+    {
+      "id": "p03",
+      "name": "무제한 라이트",
+      "monthly_price": 59000,
+      "data": "기본 100GB",
+      "throttle_after": "5Mbps",
+      "price_after_discount": 69000,
+      "discount_months": 24,
+      "description": "이름은 무제한이지만 기본 데이터 소진 후 속도가 제한됨"
+    },
+    {
+      "id": "p04",
+      "name": "무제한 프리",
+      "monthly_price": 75000,
+      "data": "무제한",
+      "throttle_after": null,
+      "price_after_discount": null,
+      "discount_months": null,
+      "description": "데이터를 다 써도 속도 제한이 없는 요금제"
+    }
+  ],
+  "rules": [
+    { "no": 1, "text": "요금제 목록에 요금제 카드가 정확히 4개(p01~p04) 있다." },
+    { "no": 2, "text": "추천 Tag는 요금제 목록에 1개만 있다." },
+    { "no": 3, "text": "요금제 카드와 요금제 상세에는 금액이 \"매달 내는 금액\" 1개와 \"할인 종료 후 금액\" 최대 1개만 있다. 정가·할인가·프로모션가 3개가 함께 표시되지 않는다." },
+    { "no": 4, "text": "할인 종료 후 금액은 24개월 할인이 있는 요금제(p03)에만 있다." },
+    { "no": 5, "text": "이름에 \"무제한\"이 들어간 요금제(p03, p04)의 카드와 상세에는 \"소진 후 ○Mbps로 제한\" 또는 \"속도 제한 없음\" 중 하나가 있다." },
+    { "no": 6, "text": "구독 신청 화면에서 이름·휴대폰 번호가 비어 있거나 동의가 체크되지 않으면 '신청하기' 버튼이 눌리지 않는다." },
+    { "no": 7, "text": "신청 완료 화면의 요금제 이름과 매달 내는 금액이 구독 신청 화면에서 선택한 요금제와 같다." }
+  ],
+  "open_questions": [
+    { "id": "q1", "section": "3", "topic": "신청 완료 뒤로(icon/arrowLeft) 목적지 (되돌아가는 흐름)", "practice_value": null },
+    { "id": "q2", "section": "3", "topic": "신청 완료 '요금제 더 보기' 목적지 (되돌아가는 흐름)", "practice_value": null },
+    { "id": "q3", "section": "4-1", "topic": "기본 정렬", "practice_value": "매달 내는 금액이 낮은 순" },
+    { "id": "q4", "section": "4-1", "topic": "필터 칩 항목", "practice_value": null },
+    { "id": "q5", "section": "4-1", "topic": "추천 Tag 대상", "practice_value": null },
+    { "id": "q6", "section": "4-1", "topic": "로딩·빈·에러 상태", "practice_value": null },
+    { "id": "q7", "section": "4-2", "topic": "기본 제공 항목의 통화·문자 등 그 밖의 행", "practice_value": null },
+    { "id": "q8", "section": "4-2", "topic": "포함 혜택(OptionItem) 내용", "practice_value": null },
+    { "id": "q9", "section": "4-2", "topic": "로딩·빈·에러 상태", "practice_value": null },
+    { "id": "q10", "section": "4-3", "topic": "뒤로 이동 시 입력값 유지 여부", "practice_value": null },
+    { "id": "q11", "section": "4-4", "topic": "'요금제 더 보기' 이동 목적지", "practice_value": null },
+    { "id": "q12", "section": "4-4", "topic": "뒤로 아이콘 이동 목적지", "practice_value": null },
+    { "id": "q13", "section": "4-4", "topic": "로딩·빈·에러 상태", "practice_value": null },
+    { "id": "q14", "section": "5", "topic": "Plan.recommended 추천 Tag 대상 요금제", "practice_value": null },
+    { "id": "q15", "section": "6", "topic": "추천 기준 정의 (다음 단계 후보)", "practice_value": null },
+    { "id": "q16", "section": "6", "topic": "필터 칩 항목 정의 (다음 단계 후보)", "practice_value": null }
+  ]
+}

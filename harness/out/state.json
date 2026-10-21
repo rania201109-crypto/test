@@ -1,0 +1,14 @@
+{
+  "current": "2",
+  "retries": {
+    "1": 0
+  },
+  "history": [
+    {
+      "stage": "1",
+      "ok": true,
+      "at": "2026-10-21T05:30:33.747Z"
+    }
+  ],
+  "stopped": false
+}
